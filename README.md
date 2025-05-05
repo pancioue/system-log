@@ -44,8 +44,10 @@
   - reset
   - disk failure
 
-查詢語法
+ex. 
+```
 dmesg --ctime | grep -iE 'error|fail|reset'
+```
 
 ## syslog、kern.log
 `kern.log` 基本上可以看做是 dmesg，
