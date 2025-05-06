@@ -62,7 +62,8 @@ dmesg --ctime | grep -iE 'error|fail|reset'
 > Ubuntu 預設使用 systemd-journald 收集 log，再轉送一份給 rsyslog 產生 /var/log/syslog 等檔案。
 * 在centOS7可能是 /var/log/messages 可視為相等的東西，centOS 也有 journalctl
 
-## logrotate 切系統檔案
+## logrotate
+_logrotate 是一個用來切檔案的程式，按照規則設定將檔案依照天(週)等切分，可以避免檔案過大過多不斷累積_
 ```
 /var/log/syslog
 {
