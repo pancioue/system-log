@@ -4,7 +4,6 @@
 但要注意，php、Mysql的錯誤一般不會寫到系統Log
 
 ## journalctl 一些常見查詢語法
-* 基本上跟 /var/log/syslog是相同的
 * 從某時之後
   ```
   journalctl --since "2025-04-26 23:00"
@@ -61,6 +60,7 @@ dmesg --ctime | grep -iE 'error|fail|reset'
 
 而 syslog 基本上就是 journalctl
 > Ubuntu 預設使用 systemd-journald 收集 log，再轉送一份給 rsyslog 產生 /var/log/syslog 等檔案。
+* 在centOS7可能是 /var/log/messages 可視為相等的東西，centOS 也有 journalctl
 
 ## logrotate 切系統檔案
 ```
