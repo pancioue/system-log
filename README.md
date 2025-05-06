@@ -4,6 +4,7 @@
 但要注意，php、Mysql的錯誤一般不會寫到系統Log
 
 ## journalctl 一些常見查詢語法
+* 基本上跟 /var/log/syslog是相同的
 * 從某時之後
   ```
   journalctl --since "2025-04-26 23:00"
